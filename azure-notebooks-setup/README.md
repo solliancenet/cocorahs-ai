@@ -33,7 +33,7 @@ At a high level, here are the setup tasks you will need to perform to prepare yo
 
 2. Start your Notebook server on `Free Compute` by selecting the **Play** icon in the toolbar as shown:
 
-	![The image shows the Azure Notebooks Projects page and highlights the area to select.](images/02.png 'Start Notebook Server')
+	![The image shows the Azure Notebooks Projects page and highlights the area to select.](images/02_2.png 'Start Notebook Server')
 
 3. It should open **Jupyter Notebooks** interface.
 
