@@ -29,7 +29,7 @@ At a high level, here are the setup tasks you will need to perform to prepare yo
 
 ## Task 3: Start the Notebook Server
 
-1. Navigate to your project: `CoCoRaHS_AI`
+1. Navigate to your project: `CoCoRaHS_AI->notebooks`
 
 2. Start your Notebook server on `Free Compute` by selecting the **Play** icon in the toolbar as shown:
 
