@@ -23,26 +23,26 @@ At a high level, here are the setup tasks you will need to perform to prepare yo
 
 3. Select **Upload GitHub Repo**.
 
-4. In the Upload GitHub Repository dialog, for the GitHub repository provide `solliancenet/azure-machine-learning-quickstarts`, and select **Import**. Allow the import a few moments to complete, the dialog will dismiss once the import has completed.
+4. In the Upload GitHub Repository dialog, for the GitHub repository provide `https://github.com/solliancenet/cocorahs-ai.git`, and select **Import**. Allow the import a few moments to complete, the dialog will dismiss once the import has completed.
 
-<img src="./images/setup_notebook/01.png" width="70%" height="70%" title="Upload GitHub Repo">
+	![In the dialog the GitHub URL to upload the project repository is shown.](images/01.png 'Upload GitHub Repository')
 
 ## Task 3: Start the Notebook Server
 
-1. Navigate to your project: `azure-machine-learning-quickstarts`
+1. Navigate to your project: `CoCoRaHS_AI`
 
 2. Start your Notebook server on `Free Compute` by selecting the **Play** icon in the toolbar as shown:
 
-	<img src="./images/setup_notebook/02.png" width="70%" height="70%" title="Start Notebook Server">
+	![The image shows the Azure Notebooks Projects page and highlights the area to select.](images/02.png 'Start Notebook Server')
 
 3. It should open **Jupyter Notebooks** interface.
 
 ## Task 4: Update your Notebook Environment 
 
-1.  Navigate to the `>aml-python-sdk->starter-artifacts->python-notebooks` folder where you will find all your quickstart files.
+1. Open notebook: **setup.ipynb**
 
-	<img src="./images/setup_notebook/03.png" width="70%" height="70%" title="Navigate to the notebooks folder">
+	![Jupyter Notebooks Interface with setup.ipynb notebook selected.](images/03.png 'Jupyter Notebooks')
 
-2. Open notebook: **00-aml-setup/00-aml-setup.ipynb**
+2. Run each cell in the notebook to install the required libraries.
 
-3. Run each cell in the notebook to install the required libraries.
+3. Note that you will have to update your Notebook environment each time you start a new session on `Free Compute`.
