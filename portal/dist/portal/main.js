@@ -370,7 +370,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<header>\n  <label class=\"ft23\"><b>CoCoRaHS - Community Colaborative Rain, Hail & Snow Network</b></label>\n</header>\n<div class=\"pt10\"><scale-bar2017></scale-bar2017></div>\n<div class=\"pt10\"><scale-bar2018></scale-bar2018></div>\n<div class=\"pt10\"><scale-bar2019></scale-bar2019></div>"
+module.exports = "<header>\r\n  <label class=\"ft23\"><b>CoCoRaHS - Community Colaborative Rain, Hail & Snow Network</b></label>\r\n</header>\r\n<div class=\"pt10\"><scale-bar2017></scale-bar2017></div>\r\n<div class=\"pt10\"><scale-bar2018></scale-bar2018></div>\r\n<div class=\"pt10\"><scale-bar2019></scale-bar2019></div>"
 
 /***/ }),
 
@@ -490,7 +490,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<label class=\"ft20\">Year 2017</label>\n<div class=\"chart-wrapper\"><canvas></canvas></div>"
+module.exports = "<label class=\"ft20\">Year 2017</label>\r\n<div class=\"chart-wrapper\"><canvas></canvas></div>"
 
 /***/ }),
 
@@ -618,7 +618,7 @@ var ScaleBar2017Component = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<label class=\"ft20\">Year 2018</label>\n<div class=\"chart-wrapper\"><canvas></canvas></div>"
+module.exports = "<label class=\"ft20\">Year 2018</label>\r\n<div class=\"chart-wrapper\"><canvas></canvas></div>"
 
 /***/ }),
 
@@ -743,7 +743,7 @@ var ScaleBar2018Component = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<label class=\"ft20\">Year 2019</label>\n<div class=\"chart-wrapper\"><canvas></canvas></div>"
+module.exports = "<label class=\"ft20\">Year 2019</label>\r\n<div class=\"chart-wrapper\"><canvas></canvas></div>"
 
 /***/ }),
 
@@ -1030,7 +1030,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\PROJECTS\Solliance\portal\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! D:\Repos\Solliance-CoCoRaHS-AI\portal\src\main.ts */"./src/main.ts");
 
 
 /***/ })

@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = [[module.i, "/* You can add global styles to this file, and also import other style files */\n.pt10 {\n  padding-top: 10px; }\n.ft23 {\n  font-size: 23px; }\n.ft20 {\n  font-size: 20px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9DOlxcUFJPSkVDVFNcXFNvbGxpYW5jZVxccG9ydGFsL3NyY1xcc3R5bGVzLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsK0VBQStFO0FBQy9FO0VBQ0ksa0JBQ0osRUFBQztBQUVEO0VBQ0ksZ0JBQWUsRUFDbEI7QUFDRDtFQUNJLGdCQUFlLEVBQ2xCIiwiZmlsZSI6InNyYy9zdHlsZXMuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qIFlvdSBjYW4gYWRkIGdsb2JhbCBzdHlsZXMgdG8gdGhpcyBmaWxlLCBhbmQgYWxzbyBpbXBvcnQgb3RoZXIgc3R5bGUgZmlsZXMgKi9cbi5wdDEwIHtcbiAgICBwYWRkaW5nLXRvcDogMTBweFxufVxuXG4uZnQyMyB7XG4gICAgZm9udC1zaXplOiAyM3B4O1xufVxuLmZ0MjAge1xuICAgIGZvbnQtc2l6ZTogMjBweDtcbn0iXX0= */", '', '']]
+module.exports = [[module.i, "/* You can add global styles to this file, and also import other style files */\n.pt10 {\n  padding-top: 10px; }\n.ft23 {\n  font-size: 23px; }\n.ft20 {\n  font-size: 20px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9EOlxcUmVwb3NcXFNvbGxpYW5jZS1Db0NvUmFIUy1BSVxccG9ydGFsL3NyY1xcc3R5bGVzLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsK0VBQStFO0FBQy9FO0VBQ0ksa0JBQ0osRUFBQztBQUVEO0VBQ0ksZ0JBQWUsRUFDbEI7QUFDRDtFQUNJLGdCQUFlLEVBQ2xCIiwiZmlsZSI6InNyYy9zdHlsZXMuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qIFlvdSBjYW4gYWRkIGdsb2JhbCBzdHlsZXMgdG8gdGhpcyBmaWxlLCBhbmQgYWxzbyBpbXBvcnQgb3RoZXIgc3R5bGUgZmlsZXMgKi9cclxuLnB0MTAge1xyXG4gICAgcGFkZGluZy10b3A6IDEwcHhcclxufVxyXG5cclxuLmZ0MjMge1xyXG4gICAgZm9udC1zaXplOiAyM3B4O1xyXG59XHJcbi5mdDIwIHtcclxuICAgIGZvbnQtc2l6ZTogMjBweDtcclxufSJdfQ== */", '', '']]
 
 /***/ }),
 
@@ -555,7 +555,7 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\PROJECTS\Solliance\portal\src\styles.scss */"./src/styles.scss");
+module.exports = __webpack_require__(/*! D:\Repos\Solliance-CoCoRaHS-AI\portal\src\styles.scss */"./src/styles.scss");
 
 
 /***/ })
