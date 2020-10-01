@@ -76,7 +76,7 @@ export class ScaleBarHeatmapComponent implements OnInit {
             this.heatMap.push(new Heatmap(row[0], [row[1], row[2], row[3], row[4], row[5],
                row[6], row[7], row[8], row[9], row[10], row[11], row[12]]));
           }
-          this.generateHeatmap();
+        this.generateHeatmap();
         }
       );
   }
@@ -87,27 +87,31 @@ export class ScaleBarHeatmapComponent implements OnInit {
       let index = 1;
       const data = [];
       hM.values.forEach(v => {
-        if (v !== "") {
+        if (v !== '') {
           data.push({x: index, y: Math.round(v * 100) / 100});
+        }else{
+          data.push({x: index, y: null});
+
         }
         index += 1;
       });
       series.push({name: hM.county, data: data});
     });
 
+    // series.sort((a,b) => a.name- b.name );
+    // console.log(series);
     this.chartOptions = {
       series: series,
       chart: {
         height: 850,
         width: 600,
-        type: "heatmap"
+        type: 'heatmap'
       },
       stroke: {
         width: 0
       },
       plotOptions: {
         heatmap: {
-          radius: 30,
           enableShades: false,
           colorScale: {
             ranges: [
@@ -145,6 +149,11 @@ export class ScaleBarHeatmapComponent implements OnInit {
                 from: 2,
                 to: 3,
                 color: "#1853DF"
+              },
+              {
+                from: null,
+                to: null,
+                color: "#ffffff"
               }
             ]
           }
