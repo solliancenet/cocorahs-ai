@@ -7,7 +7,7 @@ import { ScaleBar } from '../../models/scale-bar.model';
 import { ApiService } from '../../services/api.service';
 import 'chartjs-chart-box-and-violin-plot';
 @Component({
-  selector: 'scale-bar2017',
+  selector: 'app-scale-bar2017',
   templateUrl: './scale-bar2017.component.html',
   styleUrls: ['./scale-bar2017.component.scss']
 })
@@ -62,7 +62,6 @@ export class ScaleBar2017Component implements OnInit {
         data: data
       }]
     };
-    console.log(this.boxPlotData);
     this.ngZone.runOutsideAngular(() => {
       const node: HTMLElement = this.elementRef.nativeElement;
       this.chart = new Chart(node.querySelector('canvas'), {
@@ -72,6 +71,10 @@ export class ScaleBar2017Component implements OnInit {
           legend: {
               display: false
           },
+          title: {
+            display: true,
+            text: 'Year 2017'
+          }
       }
       });
     });

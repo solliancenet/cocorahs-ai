@@ -1,6 +1,20 @@
 <header>
   <label class="ft23"><b>CoCoRaHS - Community Colaborative Rain, Hail & Snow Network</b></label>
 </header>
-<div class="pt10"><scale-bar2017></scale-bar2017></div>
-<div class="pt10"><scale-bar2018></scale-bar2018></div>
-<div class="pt10"><scale-bar2019></scale-bar2019></div>
+<div>
+ Monthly Box-and-Whisker Plot for the State of Colorado <p style="cursor: pointer;" (click)="changeScaleBarVisibility()">( {{visibilityText}} )</p>
+</div>
+<ng-container *ngIf="!scaleBarVisibility">
+  <div class="pt10">
+    <app-scale-bar2017></app-scale-bar2017>
+  </div>
+  <div class="pt10">
+    <app-scale-bar2018></app-scale-bar2018>
+  </div>
+  <div class="pt10">
+    <app-scale-bar2019></app-scale-bar2019>
+  </div>
+  <!-- <div class="pt10">
+    <app-scale-bar-heatmap></app-scale-bar-heatmap>
+  </div> -->
+</ng-container>
