@@ -1,4 +1,4 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA, ElementRef, NgModule, NgZone, OnInit } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, ElementRef, NgModule, NgZone, OnInit, ViewChild } from '@angular/core';
 import { finalize } from 'rxjs/operators';
 import { Heatmap } from 'src/app/models/heatmap.model';
 import { ApiService } from 'src/app/services/api.service';
@@ -32,13 +32,13 @@ export type ChartOptions = {
   styleUrls: ['./scale-bar-heatmap.component.scss']
 })
 export class ScaleBarHeatmapComponent implements OnInit {
+  @ViewChild("chart") chart: ChartComponent;
 
   private heatMap: Heatmap[] = [];
   private boxPlotData: ChartData;
-  private chart: Chart;
   public chartOptions: Partial<ChartOptions>;
-  private plotColors = ['aqua', 'cornflowerblue', 'lightcoral', 'lightblue', 'lightskyblue', 'lightgreen',
-  'lightyellow', 'darkorange', 'darkviolet', 'darkturquoise', 'crimson', 'gold'];
+
+  private months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
   constructor(private api: ApiService, private readonly ngZone: NgZone, private readonly elementRef: ElementRef) { }
 
   ngOnInit() {
@@ -59,7 +59,6 @@ export class ScaleBarHeatmapComponent implements OnInit {
       });
       i++;
     }
-    console.log(series)
     return series;
   }
 
@@ -77,8 +76,7 @@ export class ScaleBarHeatmapComponent implements OnInit {
             this.heatMap.push(new Heatmap(row[0], [row[1], row[2], row[3], row[4], row[5],
                row[6], row[7], row[8], row[9], row[10], row[11], row[12]]));
           }
-          this.generateHeatmap();
-          console.log(this.heatMap);
+        this.generateHeatmap();
         }
       );
   }
@@ -87,39 +85,75 @@ export class ScaleBarHeatmapComponent implements OnInit {
     const series = [];
     this.heatMap.forEach(hM => {
       let index = 1;
-      const data=[];
+      const data = [];
       hM.values.forEach(v => {
-        data.push({x: index, y: Number(v)});
+        if (v !== '') {
+          data.push({x: index, y: Math.round(v * 100) / 100});
+        }else{
+          data.push({x: index, y: null});
+
+        }
         index += 1;
       });
       series.push({name: hM.county, data: data});
-
     });
-    console.log('series=', series);
+
+    // series.sort((a,b) => a.name- b.name );
+    // console.log(series);
     this.chartOptions = {
       series: series,
       chart: {
-        height: 350,
-        type: "heatmap"
+        height: 850,
+        width: 600,
+        type: 'heatmap'
       },
       stroke: {
         width: 0
       },
       plotOptions: {
         heatmap: {
-          radius: 30,
           enableShades: false,
           colorScale: {
             ranges: [
               {
-                from: 0,
-                to: 50,
-                color: "#008FFB"
+                from: -3,
+                to: -2,
+                color: "#cc0000"
               },
               {
-                from: 51,
-                to: 100,
-                color: "#00E396"
+                from: -2,
+                to: -1,
+                color: "#ff8000"
+              },
+              {
+                from: -1,
+                to: 0,
+                color: "#ffcccc"
+              },
+              {
+                from: 0,
+                to: 0,
+                color: "#ffffff"
+              },
+              {
+                from: 0,
+                to: 1,
+                color: "#A5BAEC"
+              },
+              {
+                from: 1,
+                to: 2,
+                color: "#6B91EB"
+              },
+              {
+                from: 2,
+                to: 3,
+                color: "#1853DF"
+              },
+              {
+                from: null,
+                to: null,
+                color: "#ffffff"
               }
             ]
           }
@@ -135,7 +169,7 @@ export class ScaleBarHeatmapComponent implements OnInit {
         type: "category"
       },
       title: {
-        text: "Rounded (Range without Shades)"
+        text: "Heatmap"
       }
     };
   }
