@@ -6,11 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'd3';
-  visibilityText='Hide';
-  scaleBarVisibility = false;
-  changeScaleBarVisibility() {
-    this.visibilityText = (this.scaleBarVisibility === false)? 'Show': 'Hide';
-    this.scaleBarVisibility = !this.scaleBarVisibility;
+
+  chartVisibility = [false, false, false];
+  visibilityText = ['Show', 'Show', 'Show'];
+
+  changeChartVisibility(chartIndex: number) {
+    this.chartVisibility[chartIndex] = !this.chartVisibility[chartIndex];
+    this.visibilityText[chartIndex] = (this.chartVisibility[chartIndex] === false) ? 'Show' : 'Hide';
   }
 }

@@ -1,10 +1,30 @@
 <header>
   <label class="ft23"><b>CoCoRaHS - Community Colaborative Rain, Hail & Snow Network</b></label>
 </header>
+
 <div>
- Monthly Box-and-Whisker Plot for the State of Colorado <p style="cursor: pointer;" (click)="changeScaleBarVisibility()">( {{visibilityText}} )</p>
+  Wettest and Driest Counties in USA <p style="cursor: pointer;" (click)="changeChartVisibility(0)">( {{visibilityText[0]}} )</p>
 </div>
-<ng-container *ngIf="!scaleBarVisibility">
+<ng-container *ngIf="chartVisibility[0]">
+  <div class="pt10">
+    Coming soon...
+  </div>
+  <br/>
+</ng-container>
+
+<div>
+  Monthly County Average ScaleBar <p style="cursor: pointer;" (click)="changeChartVisibility(1)">( {{visibilityText[1]}} )</p>
+</div>
+<ng-container *ngIf="chartVisibility[1]">
+  <div class="pt10">
+    <app-scale-bar-heatmap></app-scale-bar-heatmap>
+  </div>
+</ng-container>
+
+<div>
+ Monthly Box-and-Whisker Plot for the State of Colorado <p style="cursor: pointer;" (click)="changeChartVisibility(2)">( {{visibilityText[2]}} )</p>
+</div>
+<ng-container *ngIf="chartVisibility[2]">
   <div class="pt10">
     <app-scale-bar2017></app-scale-bar2017>
   </div>
@@ -14,7 +34,6 @@
   <div class="pt10">
     <app-scale-bar2019></app-scale-bar2019>
   </div>
-  <div class="pt10">
-    <app-scale-bar-heatmap></app-scale-bar-heatmap>
-  </div>
 </ng-container>
+
+
