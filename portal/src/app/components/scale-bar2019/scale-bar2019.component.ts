@@ -7,7 +7,7 @@ import { ApiService } from '../../services/api.service';
 import * as Chart from 'chart.js';
 
 @Component({
-  selector: 'scale-bar2019',
+  selector: 'app-scale-bar2019',
   templateUrl: './scale-bar2019.component.html',
   styleUrls: ['./scale-bar2019.component.scss']
 })
@@ -71,6 +71,10 @@ export class ScaleBar2019Component implements OnInit {
           legend: {
             display: false
           },
+          title: {
+            display: true,
+            text: 'Year 2019'
+          }
         }
       });
     });

@@ -7,14 +7,14 @@ import { ApiService } from '../../services/api.service';
 import * as Chart from 'chart.js';
 
 @Component({
-  selector: 'scale-bar2018',
+  selector: 'app-scale-bar2018',
   templateUrl: './scale-bar2018.component.html',
   styleUrls: ['./scale-bar2018.component.scss']
 })
 
 export class ScaleBar2018Component implements OnInit {
   private scaleBar: ScaleBar[] = [];
-  private  boxPlotData: ChartData;
+  private boxPlotData: ChartData;
   private chart: Chart;
   private months = [];
   private plotColors = ['aqua', 'cornflowerblue', 'lightcoral', 'lightblue', 'lightskyblue', 'lightgreen',
@@ -39,9 +39,11 @@ export class ScaleBar2018Component implements OnInit {
             const row = csvToRowArray[index].split(',');
             this.scaleBar.push(new ScaleBar(row[12], row[8]));
             if(this.months.indexOf(row[12]) === -1){
+              console.log(row,row[12])
               this.months.push(row[12]);
             }
           }
+          console.log(this.scaleBar)
           this.drawBoxPlot();
         }
       );
@@ -51,7 +53,7 @@ export class ScaleBar2018Component implements OnInit {
     const data = [];
     let previousValue = 0;
 
-    this.scaleBar.forEach(x=>{
+    this.scaleBar.forEach(x => {
       data.push([Number(x.scaleBar), Number(previousValue)]);
       previousValue = Number(x.scaleBar);
     });
@@ -71,10 +73,12 @@ export class ScaleBar2018Component implements OnInit {
           legend: {
               display: false
           },
+          title: {
+            display: true,
+            text: 'Year 2018'
+          }
       }
       });
     });
   }
-
-
 }

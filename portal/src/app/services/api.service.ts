@@ -33,6 +33,14 @@ export class ApiService {
             );
     }
 
+    public getHeatmap(): Observable<any> {
+        return this.http.get(
+            `assets/files/Heatmap-2018.csv`,  {responseType: 'text'})
+            .pipe(
+                catchError(this.handleError<any>('test'))
+            );
+    }
+
     handleError<T>(operation = 'operation',  result?: T) {
         return (error, caught) => {
             let message = 'An unknown error has occurred.';

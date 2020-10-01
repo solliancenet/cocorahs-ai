@@ -8,6 +8,9 @@ import { ApiService } from './services/api.service';
 import { ScaleBar2017Component } from './components/scale-bar2017/scale-bar2017.component';
 import { ScaleBar2019Component } from './components/scale-bar2019/scale-bar2019.component';
 import { ScaleBar2018Component } from './components/scale-bar2018/scale-bar2018.component';
+import { ScaleBarHeatmapComponent } from './components/scale-bar-heatmap/scale-bar-heatmap.component';
+import { NgApexchartsModule } from 'ng-apexcharts';
+
 
 
 @NgModule({
@@ -16,12 +19,14 @@ import { ScaleBar2018Component } from './components/scale-bar2018/scale-bar2018.
     ScaleBar2017Component,
     ScaleBar2017Component,
     ScaleBar2018Component,
-    ScaleBar2019Component
+    ScaleBar2019Component,
+    ScaleBarHeatmapComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NgApexchartsModule
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]
