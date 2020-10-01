@@ -9,9 +9,25 @@ export class ApiService {
 
     constructor(private http: HttpClient) { }
 
-    public getFirstScaleBar2017(): Observable<any> {
+    public getScaleBar2017(): Observable<any> {
         return this.http.get(
             `assets/files/ScaleBar-2017.csv`,  {responseType: 'text'})
+            .pipe(
+                catchError(this.handleError<any>('test'))
+            );
+    }
+
+    public getScaleBar2018(): Observable<any> {
+        return this.http.get(
+            `assets/files/ScaleBar-2018.csv`,  {responseType: 'text'})
+            .pipe(
+                catchError(this.handleError<any>('test'))
+            );
+    }
+
+    public getScaleBar2019(): Observable<any> {
+        return this.http.get(
+            `assets/files/ScaleBar-2019.csv`,  {responseType: 'text'})
             .pipe(
                 catchError(this.handleError<any>('test'))
             );
