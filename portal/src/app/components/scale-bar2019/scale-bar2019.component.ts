@@ -1,6 +1,5 @@
 import { Component, ElementRef, NgZone, OnInit } from '@angular/core';
 import { ChartData } from 'chart.js';
-import * as d3 from 'd3';
 import { finalize } from 'rxjs/operators';
 import { ScaleBar } from '../../models/scale-bar.model';
 import { ApiService } from '../../services/api.service';

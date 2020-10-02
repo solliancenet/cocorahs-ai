@@ -13,7 +13,7 @@ export class ApiService {
         return this.http.get(
             `assets/files/ScaleBar-2017.csv`,  {responseType: 'text'})
             .pipe(
-                catchError(this.handleError<any>('test'))
+                catchError(this.handleError<any>('GetScaleBar2017'))
             );
     }
 
@@ -21,7 +21,7 @@ export class ApiService {
         return this.http.get(
             `assets/files/ScaleBar-2018.csv`,  {responseType: 'text'})
             .pipe(
-                catchError(this.handleError<any>('test'))
+                catchError(this.handleError<any>('GetScaleBar2018'))
             );
     }
 
@@ -29,7 +29,7 @@ export class ApiService {
         return this.http.get(
             `assets/files/ScaleBar-2019.csv`,  {responseType: 'text'})
             .pipe(
-                catchError(this.handleError<any>('test'))
+                catchError(this.handleError<any>('GetScaleBar2019'))
             );
     }
 
@@ -37,7 +37,15 @@ export class ApiService {
         return this.http.get(
             `assets/files/Heatmap-2018.csv`,  {responseType: 'text'})
             .pipe(
-                catchError(this.handleError<any>('test'))
+                catchError(this.handleError<any>('GetHeatmap'))
+            );
+    }
+
+    public getWettestCounties(): Observable<any> {
+        return this.http.get(
+            `assets/files/WettestCounties.csv`,  {responseType: 'text'})
+            .pipe(
+                catchError(this.handleError<any>('GetWettestCounties'))
             );
     }
 

@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
 
   chartVisibility = [false, false, false];
-  visibilityText = ['Show', 'Show', 'Show'];
+  visibilityText = ['Show', 'Show', 'Show', 'Show'];
 
   changeChartVisibility(chartIndex: number) {
     this.chartVisibility[chartIndex] = !this.chartVisibility[chartIndex];

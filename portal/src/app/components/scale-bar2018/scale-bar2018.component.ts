@@ -39,11 +39,9 @@ export class ScaleBar2018Component implements OnInit {
             const row = csvToRowArray[index].split(',');
             this.scaleBar.push(new ScaleBar(row[12], row[8]));
             if(this.months.indexOf(row[12]) === -1){
-              console.log(row,row[12])
               this.months.push(row[12]);
             }
           }
-          console.log(this.scaleBar)
           this.drawBoxPlot();
         }
       );

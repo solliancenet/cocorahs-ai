@@ -1,30 +1,74 @@
 <header>
   <label class="ft23"><b>CoCoRaHS - Community Colaborative Rain, Hail & Snow Network</b></label>
 </header>
+<div>
+  <label class="ft23"><b>Find your own weather insights with the CoCoRaHS dataset </b></label>
+</div>
+<br />
+<div>
+  <label>
+    CoCoRaHS (pronounced KO-ko-rozz) is a grassroots volunteer network of backyard weather observers of all ages and
+    backgrounds working together to measure and map precipitation (rain, hail and snow) in their local communities. By
+    using low-cost measurement tools, stressing training and education, and utilizing an interactive Website, our aim is
+    to provide the highest quality data for natural resource, education and research applications. The only requirements
+    to join are an enthusiasm for watching and reporting weather conditions and a desire to learn more about how weather
+    can affect and impact our lives.
+    <br /><br />
+    Our Web page provides the ability for our observers to see their observations mapped out in "real time", as well as
+    providing a wealth of information for our data users.
+    <br /><br />
+    All of this data is in the public domain and free for you to explore and utilize in your research and commercial
+    projects.
+    <br /><br />
+    Want to understand the types of analysis you can do with CoCoRaHS data? Read on for some examples of the types of
+    questions you can answer and the for instructions on how easy it is for you to get the data.
+    <br /><br />
+  </label>
+</div>
 
 <div>
-  Wettest and Driest Counties in USA <p style="cursor: pointer;" (click)="changeChartVisibility(0)">( {{visibilityText[0]}} )</p>
+  <label class="ft19"><b>What are the top 10 wettest counties in the USA?</b></label>
+  <p style="cursor: pointer;" (click)="changeChartVisibility(0)">(
+    {{visibilityText[0]}} )</p>
 </div>
 <ng-container *ngIf="chartVisibility[0]">
   <div class="pt10">
-    Coming soon...
+    <app-wettest-counties></app-wettest-counties>
   </div>
-  <br/>
+  <br />
 </ng-container>
 
 <div>
-  Monthly County Average ScaleBar <p style="cursor: pointer;" (click)="changeChartVisibility(1)">( {{visibilityText[1]}} )</p>
+  <label class="ft19"><b>How do US states compare in rainfall in any given month over a calendar year?</b></label>
+  <p style="cursor: pointer;" (click)="changeChartVisibility(1)">(
+    {{visibilityText[1]}} )</p>
 </div>
 <ng-container *ngIf="chartVisibility[1]">
+  <div class="pt10">
+    Coming soon...
+  </div>
+  <br />
+</ng-container>
+
+
+
+<div>
+  <label class="ft19"><b>How do counties vary in rainfall by county?</b></label>
+  <p style="cursor: pointer;" (click)="changeChartVisibility(2)">( {{visibilityText[2]}}
+    )</p>
+</div>
+<ng-container *ngIf="chartVisibility[2]">
   <div class="pt10">
     <app-scale-bar-heatmap></app-scale-bar-heatmap>
   </div>
 </ng-container>
 
 <div>
- Monthly Box-and-Whisker Plot for the State of Colorado <p style="cursor: pointer;" (click)="changeChartVisibility(2)">( {{visibilityText[2]}} )</p>
+  <label class="ft19"><b>Monthly Box-and-Whisker Plot for the State of Colorado</b></label>
+  <p style="cursor: pointer;" (click)="changeChartVisibility(3)">
+    ( {{visibilityText[3]}} )</p>
 </div>
-<ng-container *ngIf="chartVisibility[2]">
+<ng-container *ngIf="chartVisibility[3]">
   <div class="pt10">
     <app-scale-bar2017></app-scale-bar2017>
   </div>
@@ -35,5 +79,14 @@
     <app-scale-bar2019></app-scale-bar2019>
   </div>
 </ng-container>
-
-
+<div class="pt10">
+  <label class="ft19"><b>Get access and start exploring now!</b></label>
+</div>
+<br />
+<div>
+  <label>
+    Getting access to the CoCoRaHS dataset is easy cloning this GitHub repo, opening the notebook that most interests
+    you and running it! All of the data will be downloaded for you from our public cloud storage running on Microsoft
+    Azure.
+  </label>
+</div>
