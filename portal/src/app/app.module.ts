@@ -10,6 +10,10 @@ import { ScaleBar2019Component } from './components/scale-bar2019/scale-bar2019.
 import { ScaleBar2018Component } from './components/scale-bar2018/scale-bar2018.component';
 import { ScaleBarHeatmapComponent } from './components/scale-bar-heatmap/scale-bar-heatmap.component';
 import { NgApexchartsModule } from 'ng-apexcharts';
+import { WettestCountiesComponent } from './components/wettest-counties/wettest-counties.component';
+import { HighchartsChartModule } from 'highcharts-angular';
+import "chartjs-chart-box-and-violin-plot";
+import { ChartModule } from "angular2-chartjs";
 
 
 
@@ -20,13 +24,16 @@ import { NgApexchartsModule } from 'ng-apexcharts';
     ScaleBar2017Component,
     ScaleBar2018Component,
     ScaleBar2019Component,
-    ScaleBarHeatmapComponent
+    ScaleBarHeatmapComponent,
+    WettestCountiesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    NgApexchartsModule
+    NgApexchartsModule,
+    HighchartsChartModule,
+    ChartModule
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]

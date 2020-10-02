@@ -97,9 +97,7 @@ export class ScaleBarHeatmapComponent implements OnInit {
       });
       series.push({name: hM.county, data: data});
     });
-
-    // series.sort((a,b) => a.name- b.name );
-    // console.log(series);
+    
     this.chartOptions = {
       series: series,
       chart: {
