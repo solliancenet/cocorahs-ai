@@ -49,6 +49,14 @@ export class ApiService {
             );
     }
 
+    public getUsAverage(): Observable<any> {
+        return this.http.get(
+            `assets/files/2018USAverages.csv`,  {responseType: 'text'})
+            .pipe(
+                catchError(this.handleError<any>('getUsAverage'))
+            );
+    }
+
     handleError<T>(operation = 'operation',  result?: T) {
         return (error, caught) => {
             let message = 'An unknown error has occurred.';

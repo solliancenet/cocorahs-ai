@@ -1,0 +1,13 @@
+<div style="display: block">
+  <div class="textCenter">
+    <select name="duration" [(ngModel)]="selectedMonth" style="width: 300px" (change)="monthChanged()">
+      <option *ngFor="let m of months" [value]="m.id">{{m.name}}</option>
+    </select>
+  </div>
+  <div class="pt10 textCenter">
+    <label>Selected Month: {{months[selectedMonth-1].name}}</label>
+    <canvas baseChart [datasets]="geoChartData" [labels]="geoChartLabels" [options]="geoChartOptions"
+      [legend]="geoChartLegend" [chartType]="geoChartType" [colors]="geoColors">
+    </canvas>
+  </div>
+</div>
