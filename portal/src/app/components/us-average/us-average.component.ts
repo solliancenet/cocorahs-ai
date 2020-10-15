@@ -23,10 +23,10 @@ export class UsAverageComponent implements OnInit {
   public geoColors: any;
   public geoChartData: any;
   public selectedMonth = 1;
-  public months = [{id: 1, name: 'January'}, {id: 2, name: 'February'},
-  {id: 3, name: 'March'}, {id: 4, name: 'April'}, {id: 5, name: 'May'}, {id: 6, name: 'June'},
-  {id: 7, name: 'July'}, {id: 8, name: 'August'}, {id: 9, name: 'September'}, {id: 10, name: 'October'},
-  {id: 11, name: 'November'}, {id: 12, name: 'December'}];
+  public months = [{id: 1, name: 'January 2018'}, {id: 2, name: 'February 2018'},
+  {id: 3, name: 'March 2018'}, {id: 4, name: 'April 2018'}, {id: 5, name: 'May 2018'}, {id: 6, name: 'June 2018'},
+  {id: 7, name: 'July 2018'}, {id: 8, name: 'August 2018'}, {id: 9, name: 'September 2018'}, {id: 10, name: 'October 2018'},
+  {id: 11, name: 'November 2018'}, {id: 12, name: 'December 2018'}];
   constructor(private api: ApiService) { }
 
   ngOnInit() {

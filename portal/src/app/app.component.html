@@ -31,10 +31,8 @@
 
 <div>
   <label class="ft19"><b>What are the top 10 wettest counties in the USA?</b></label>
-  <p style="cursor: pointer;" (click)="changeChartVisibility(0)">(
-    {{visibilityText[0]}} )</p>
 </div>
-<ng-container *ngIf="chartVisibility[0]">
+<ng-container>
   <div class="pt10">
     <app-wettest-counties></app-wettest-counties>
   </div>
@@ -43,10 +41,8 @@
 
 <div>
   <label class="ft19"><b>How do US states compare in rainfall in any given month over a calendar year?</b></label>
-  <p style="cursor: pointer;" (click)="changeChartVisibility(1)">(
-    {{visibilityText[1]}} )</p>
 </div>
-<ng-container *ngIf="chartVisibility[1]">
+<ng-container>
   <div class="pt10">
     <app-us-average></app-us-average>
   </div>
@@ -57,10 +53,8 @@
 
 <div>
   <label class="ft19"><b>How do counties vary in rainfall by county?</b></label>
-  <p style="cursor: pointer;" (click)="changeChartVisibility(2)">( {{visibilityText[2]}}
-    )</p>
 </div>
-<ng-container *ngIf="chartVisibility[2]">
+<ng-container>
   <div class="pt10">
     <app-scale-bar-heatmap></app-scale-bar-heatmap>
   </div>
@@ -68,10 +62,8 @@
 
 <div>
   <label class="ft19"><b>Monthly Box-and-Whisker Plot for the State of Colorado</b></label>
-  <p style="cursor: pointer;" (click)="changeChartVisibility(3)">
-    ( {{visibilityText[3]}} )</p>
 </div>
-<ng-container *ngIf="chartVisibility[3]">
+<ng-container>
   <div class="pt10">
     <app-scale-bar2017></app-scale-bar2017>
   </div>
