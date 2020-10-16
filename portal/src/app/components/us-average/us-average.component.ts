@@ -80,11 +80,17 @@ export class UsAverageComponent implements OnInit {
       this.geoChartLabels = states.map(d => d.properties.name);
       this.geoColors = states.map(() => ({}));
 
-      const data = [];
-      this.usAverage.forEach(x => {
-        const stringState = x.state.toString();
-        const existingState = states.find( x => x.properties.name === stringState);
-        data.push({feature: existingState, value: Number(x.scaleBar)});
+      const data = states.map(d => ({
+        feature: d,
+        value: Math.random() * 10
+      }));
+
+      data.forEach(el => {
+        const stringState = el.feature.properties.name.toString();
+        const existing = this.usAverage.find(u => u.state == stringState);
+        if (existing !== undefined) {
+          el.value = Number(existing.scaleBar);
+        }
       });
 
       this.geoChartData = [
