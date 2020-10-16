@@ -46,20 +46,35 @@ export class WettestCountiesComponent implements OnInit {
           const csvToRowArray = data.split('\n');
           for (let index = 0; index < csvToRowArray.length - 1; index++) {
             const row = csvToRowArray[index].split(',');
-
             let count = 3;
             const list = [];
             for (let m = 1; m <= 12; m++) { // for each month
               const list2 = [];
-              for (let v = 0; v < 7; v++) { 
-                const value = (row[count + v] === '') ? 0 : Number(row[count + v]);
-                list2.push(value);
-              }
+              const value0 = (row[count + 2] === '') ? 0 : Number(row[count + 2]); // max
+              const value1 = (row[count + 5] === '') ? 0 : Number(row[count + 5]); // min
+              const value2 = (row[count + 2] === '') ? 0 : Number(row[count + 2]); // q3 - count sau upper
+              const value3 = (row[count + 1] === '') ? 0 : Number(row[count + 1]); // q1 - lower
+              const value4 = (row[count + 4] === '') ? 0 : Number(row[count + 4]); // median
+              list2.push(value0);
+              list2.push(value1);
+              list2.push(value2);
+              list2.push(value3);
+              list2.push(value4);
+
+              // for (let v = 0; v < 5; v++) { 
+              //   const value = (row[count + v] === '') ? 0 : Number(row[count + v]);
+              //   list2.push(value);
+              // }
               count += 7;
               list.push(list2);
             }
             this.wettestCountiesData.push(new WettestCounties(row[0], row[2], list));
           }
+          console.log(this.wettestCountiesData)
+
+          this.wettestCountiesData.forEach(x=>{
+
+          })
           this.drawFirstChart();
         }
       );
@@ -107,7 +122,7 @@ export class WettestCountiesComponent implements OnInit {
           outlierColor: '#999999',
           padding: 10,
           itemRadius: 0,
-          data: this.wettestCountiesData[1].values
+          data: this.wettestCountiesData[2].values
         },
       ]
     };
@@ -122,7 +137,7 @@ export class WettestCountiesComponent implements OnInit {
           outlierColor: '#999999',
           padding: 10,
           itemRadius: 0,
-          data: this.wettestCountiesData[1].values
+          data: this.wettestCountiesData[3].values
         },
       ]
     };
@@ -137,7 +152,7 @@ export class WettestCountiesComponent implements OnInit {
           outlierColor: '#999999',
           padding: 10,
           itemRadius: 0,
-          data: this.wettestCountiesData[1].values
+          data: this.wettestCountiesData[4].values
         },
       ]
     };
@@ -152,7 +167,7 @@ export class WettestCountiesComponent implements OnInit {
           outlierColor: '#999999',
           padding: 10,
           itemRadius: 0,
-          data: this.wettestCountiesData[1].values
+          data: this.wettestCountiesData[5].values
         },
       ]
     };
@@ -167,7 +182,7 @@ export class WettestCountiesComponent implements OnInit {
           outlierColor: '#999999',
           padding: 10,
           itemRadius: 0,
-          data: this.wettestCountiesData[1].values
+          data: this.wettestCountiesData[6].values
         },
       ]
     };
@@ -182,7 +197,7 @@ export class WettestCountiesComponent implements OnInit {
           outlierColor: '#999999',
           padding: 10,
           itemRadius: 0,
-          data: this.wettestCountiesData[1].values
+          data: this.wettestCountiesData[7].values
         },
       ]
     };
@@ -197,7 +212,7 @@ export class WettestCountiesComponent implements OnInit {
           outlierColor: '#999999',
           padding: 10,
           itemRadius: 0,
-          data: this.wettestCountiesData[1].values
+          data: this.wettestCountiesData[8].values
         },
       ]
     };
@@ -212,7 +227,7 @@ export class WettestCountiesComponent implements OnInit {
           outlierColor: '#999999',
           padding: 10,
           itemRadius: 0,
-          data: this.wettestCountiesData[1].values
+          data: this.wettestCountiesData[9].values
         },
       ]
     };
