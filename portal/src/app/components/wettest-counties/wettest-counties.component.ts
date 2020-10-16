@@ -61,18 +61,13 @@ export class WettestCountiesComponent implements OnInit {
               list2.push(value3);
               list2.push(value4);
 
-              // for (let v = 0; v < 5; v++) { 
-              //   const value = (row[count + v] === '') ? 0 : Number(row[count + v]);
-              //   list2.push(value);
-              // }
               count += 7;
               list.push(list2);
             }
             this.wettestCountiesData.push(new WettestCounties(row[0], row[2], list));
           }
-          console.log(this.wettestCountiesData)
 
-          this.wettestCountiesData.forEach(x=>{
+          this.wettestCountiesData.forEach(x => {
 
           })
           this.drawFirstChart();
