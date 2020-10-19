@@ -63,17 +63,22 @@
 <div>
   <label class="ft19"><b>Monthly Box-and-Whisker Plot for the State of Colorado</b></label>
 </div>
-<ng-container>
-  <div class="pt10">
+<div style="display: block">
+  <div class="textCenter">
+    <select name="duration" [(ngModel)]="selectedYear" style="width: 300px">
+      <option *ngFor="let y of years" [value]="y">{{y}}</option>
+    </select>
+  </div>
+  <div class="pt10 textCenter" *ngIf="selectedYear == 2017">
     <app-scale-bar2017></app-scale-bar2017>
   </div>
-  <div class="pt10">
+  <div class="pt10 textCenter" *ngIf="selectedYear == 2018">
     <app-scale-bar2018></app-scale-bar2018>
   </div>
-  <div class="pt10">
+  <div class="pt10 textCenter" *ngIf="selectedYear == 2019">
     <app-scale-bar2019></app-scale-bar2019>
   </div>
-</ng-container>
+</div>
 <div class="pt10">
   <label class="ft19"><b>Get access and start exploring now!</b></label>
 </div>
