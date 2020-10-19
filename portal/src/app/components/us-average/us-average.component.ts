@@ -70,7 +70,7 @@ export class UsAverageComponent implements OnInit {
           colorScale: {
             display: true,
             position: 'bottom',
-            quantize: 5,
+            quantize: 0,
             legend: {
               position: 'bottom-right'
             }
