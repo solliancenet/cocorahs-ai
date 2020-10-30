@@ -64,7 +64,7 @@ export class WettestCountiesComponent implements OnInit {
               count += 7;
               list.push(list2);
             }
-            this.wettestCountiesData.push(new WettestCounties(row[0], row[2], list));
+            this.wettestCountiesData.push(new WettestCounties(row[0], row[2] + ', ' + row[1], list));
           }
 
           this.wettestCountiesData.forEach(x => {
