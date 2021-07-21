@@ -28,4 +28,4 @@ This notebook is divided into the following sections:
 
 ## cocorahs-ai_book3 - State and County Level Analysis of Dry and Wet Conditions
 
-[TBD]
+[TBD]...
